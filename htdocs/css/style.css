@@ -1,0 +1,131 @@
+body {
+    overflow-y: scroll;
+    width: 800px;
+    margin: 8px auto;
+    padding-left: 1em;
+    border-left: 1px solid #ccc;
+}
+
+main {
+    min-height: 20em;
+}
+
+/**
+ * Style a dice using UTF-8 characters.
+ */
+
+/**
+ * CSS sprite for a dice with six faces.
+ */
+ /* .dice-sprite {
+    display: inline-block;
+    padding: 0;
+    margin: 0 4px 0 0;
+    width: 32px;
+    height: 32px;
+    background: url(dice-faces.jpg) no-repeat;
+}
+
+.dice-sprite.dice-1 { background-position: -160px 0; }
+.dice-sprite.dice-2 { background-position: -128px 0; }
+.dice-sprite.dice-3 { background-position: -96px 0; }
+.dice-sprite.dice-4 { background-position: -64px 0; }
+.dice-sprite.dice-5 { background-position: -32px 0; }
+.dice-sprite.dice-6 { background-position: 0 0; } */
+
+footer {
+    border-top: 1px solid #ccc;
+    min-height: 4em;
+    text-align: center;
+}
+
+.first-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-face .pip:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+.third-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-face .pip:nth-of-type(2) {
+    align-self: center;
+}
+
+.third-face .pip:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.fourth-face, .sixth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column, .sixth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+}
+
+  /* OTHER STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+[class$="face"] {
+    margin: 4px;
+    padding: 8px;
+    background-color: #e7e7e7;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    box-shadow:
+        inset 0 2px white,
+        inset 0 -2px #bbb,
+        inset 2px 0 #d7d7d7,
+        inset -2px 0 #d7d7d7;
+    border-radius: 10%;
+}
+
+.pip {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0px;
+    background-color: #333;
+    box-shadow: inset 0 1px #111, inset 0 -1px #555;
+}
+
+.die {
+    display: flex;
+}
+
+
