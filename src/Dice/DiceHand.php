@@ -4,43 +4,47 @@ declare(strict_types=1);
 
 namespace Redast\Dice;
 
-/* use function Mos\Functions\{
-    destroySession,
-    redirectTo,
-    renderView,
-    renderTwigView,
-    sendResponse,
-    url
-}; */
-
 /**
  * Class DiceHand.
  */
 class DiceHand
 {
-    private int $number;
-    private array $dice;
-    private array $faces;
-    public function __construct(int $number)
+    public int $diceCount;
+    public array $dice;
+    public array $rollDigits;
+    public string $rollFaces;
+    public function __construct(int $diceCount)
     {
-        $this->number = $number;
-        for ($i = 0; $i <= $this->number-1; $i++) {
-            $this->dice[$i] = new Dice();
+        $this->dice = [];
+        $this->rollDigits = [];
+        $this->rollFaces = "";
+        $this->diceCount = $diceCount;
+        for ($i = 0; $i < $this->diceCount; $i++) {
+            $this->dice[$i] = new GraphicalDice();
         }
     }
 
     public function roll(): void
     {
-        for ($i = 0; $i <= $this->number-1; $i++) {
-            $this->faces[$i] = $this->dice[$i]->roll();
+        for ($i = 0; $i < $this->diceCount; $i++) {
+            $this->dice[$i]->roll();
+            $this->rollDigits[$i] =  $this->dice[$i]->getLastRoll();
+            $this->rollFaces .= $this->dice[$i]->graphic();
         }
     }
 
-    public function getLastRoll(): array
+    public function getLastRollDigits(): array
     {
-        if (empty($this->faces)) {
-            $this->roll();
-        }
-        return $this->faces;
+        return $this->rollDigits;
+    }
+
+    public function getLastRollFaces(): string
+    {
+        return $this->rollFaces;
+    }
+
+    public function getLastRollSum(): int
+    {
+        return array_sum($this->rollDigits);
     }
 }

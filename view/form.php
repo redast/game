@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Redast\form;
@@ -11,6 +12,7 @@ use function Mos\Functions\{
     sendResponse,
     url
 };
+
 session_destroy();
 ?>
 <h1>Play game 21</h1>
@@ -19,9 +21,9 @@ session_destroy();
 
     <fieldset>
         <legend>Chose how many dice you want to play with:</legend>
-        <input type="radio" id="one" name="die_count" value="1">
+        <input type="radio" id="one" name="diceCount" value="1">
         <label for="1">1</label><br>
-        <input type="radio" id="two" name="die_count" value="2">
+        <input type="radio" id="two" name="diceCount" value="2">
         <label for="2">2</label><br>
         <input type="submit" name="submit" value="Send">
     </fieldset>

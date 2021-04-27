@@ -1,1 +1,11 @@
-/home/reda/dbwebb-kurser/mvc/me/game/src/Router/Router.php:21	The method dispatch() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:23	The method playGame() has 115 lines of code. Current threshold is set to 100. Avoid really long methods.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:31	Avoid unused local variables such as '$submit'.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:32	Avoid unused local variables such as '$stop'.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:33	Avoid unused local variables such as '$restart'.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:89	The method playGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:180	The method getWinner uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:185	The method getWinner uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:190	The method getWinner uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:197	The method getWinner uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Router/Router.php:21	The method dispatch() has a Cyclomatic Complexity of 17. The configured cyclomatic complexity threshold is 10.
+/home/reda/dbwebb-kurser/mvc/me/game/src/Router/Router.php:76	Missing class import via use statement (line '76', column '33').

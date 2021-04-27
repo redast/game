@@ -56,7 +56,7 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
-        }else if ($method === "GET" && $path === "/form") {
+        } else if ($method === "GET" && $path === "/form") {
              $data = [
                  "header" => "Play game 21",
                  "message" => "Chose how many dice you want to play with:",

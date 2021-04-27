@@ -4,38 +4,29 @@ declare(strict_types=1);
 
 namespace Redast\Dice;
 
-/* use function Mos\Functions\{
-    destroySession,
-    redirectTo,
-    renderView,
-    renderTwigView,
-    sendResponse,
-    url
-}; */
-
 /**
  * Class Dice.
  */
 class Dice
 {
-    //const FACES = 6;
-
-    //private ?int $roll = null;
-
+    private int $faces;
+    private int $lastRoll;
     public function __construct(int $faces = 6)
     {
         $this->faces = $faces;
+        $this->lastRoll = 0;
     }
 
-    public function roll(): int
+    public function roll(): void
     {
-        $this->roll = rand(1, $this->faces);
-
-        return $this->roll;
+        $this->lastRoll = rand(1, $this->faces);
     }
 
     public function getLastRoll(): int
     {
-        return $this->roll;
+        if ($this->lastRoll == 0) {
+            $this->roll();
+        }
+        return $this->lastRoll;
     }
 }
