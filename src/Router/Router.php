@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Mos\Router;
 
+use Redast\Dice\Game;
+
 use function Mos\Functions\{
     destroySession,
     redirectTo,
@@ -66,12 +68,6 @@ class Router
 
              return;
         } else if ($method === "POST" && $path === "/dice") {
-            /*  $data = [
-                    "header" => "Dice",
-                    "message" => "Hey, edit this to do it youreself!",
-                ];
-                $body = renderView("layout/dice.php", $data);
-                sendResponse($body); */
 
                 $callable = new \Redast\Dice\Game();
 
