@@ -68,7 +68,6 @@ class Router
 
              return;
         } else if ($method === "POST" && $path === "/dice") {
-
                 $callable = new \Redast\Dice\Game();
 
                 $callable->playGame();

@@ -28,9 +28,6 @@ class Game
         ];
         $diceCount = $_POST["diceCount"] ?? null;
         $diceCount = (int)$diceCount;
-        $submit = $_POST["submit"] ?? null;
-        $stop = $_POST["stop"] ?? null;
-        $restart = $_POST["restart"] ?? null;
 
         if (isset($_POST['submit'])) {
             if (!isset($_SESSION["diceCount"])) {

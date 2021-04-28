@@ -72,19 +72,27 @@ class GraphicalDice extends Dice
     public function graphic(): string
     {
         $face = $this->getLastRoll();
+        $graphic = "";
         switch ($face) {
             case 1:
-                return self::SIDE_1;
+                $graphic = self::SIDE_1;
+                break;
             case 2:
-                return self::SIDE_2;
+                $graphic = self::SIDE_2;
+                break;
             case 3:
-                return self::SIDE_3;
+                $graphic = self::SIDE_3;
+                break;
             case 4:
-                return self::SIDE_4;
+                $graphic = self::SIDE_4;
+                break;
             case 5:
-                return self::SIDE_5;
+                $graphic = self::SIDE_5;
+                break;
             case 6:
-                return self::SIDE_6;
+                $graphic = self::SIDE_6;
+                break;
         }
+        return $graphic;
     }
 }

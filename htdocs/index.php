@@ -21,8 +21,8 @@ define("INSTALL_PATH", realpath(__DIR__ . "/.."));
 require INSTALL_PATH . "/vendor/autoload.php";
 
 // Load the inital configuration
-//require INSTALL_PATH . "/config/bootstrap.php";
-require_once __DIR__ . "/../build/config/bootstrap.php";
+require INSTALL_PATH . "/config/bootstrap.php";
+
 
 
 /**
