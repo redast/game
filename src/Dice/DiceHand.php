@@ -33,17 +33,17 @@ class DiceHand
         }
     }
 
-    public function getLastRollDigits(): array
+    public function getLastDigits(): array
     {
         return $this->rollDigits;
     }
 
-    public function getLastRollFaces(): string
+    public function getLastFaces(): string
     {
         return $this->rollFaces;
     }
 
-    public function getLastRollSum(): int
+    public function getLastSum(): int
     {
         return array_sum($this->rollDigits);
     }

@@ -10,6 +10,10 @@ declare(strict_types=1);
 error_reporting(-1);                // Report all type of errors
 ini_set("display_errors", "1");     // Display all errors
 
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+
 // Start the session
 session_name(preg_replace("/[^a-z\d]/i", "", __DIR__));
 session_start();

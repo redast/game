@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Redast\form;
+//namespace Redast\form;
 
 use function Mos\Functions\{
     destroySession,
@@ -13,11 +13,10 @@ use function Mos\Functions\{
     url
 };
 
-session_destroy();
 ?>
 <h1>Play game 21</h1>
 <main>
-<form method="post" class="21-form" action="<?= url('/dice') ?>">
+<form method="post" class="21-form" action="<?= $action ?>">
 
     <fieldset>
         <legend>Chose how many dice you want to play with:</legend>

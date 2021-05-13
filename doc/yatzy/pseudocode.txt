@@ -1,0 +1,48 @@
+create resultTable to show result
+create button to start game POST ("submit")
+
+IF POST ("submit")
+    create button rollAgain
+    create button playAnotherRound
+    start Yatzy game
+        SET variables rollNumber, diceSum, totalSum, endSum, bonus
+        CREATE array  to keep dice
+
+        IF diceSum for rows 1-6 is NOT blank
+            WHILE rollNumber < 3
+
+                roll 5 dice
+                putt dice into array dice
+                save array dice in SESSION
+                increment rollNumber
+                save rollNumber in SESSION
+                DISPLAY dice
+                DISPLAY input to choose dices to roll again
+                GET input
+
+                IF input == 0
+                    COUNT diceSum
+                    save diceSum in SESSION
+                    DISPLAY diceSum in resultTable
+
+                ELSE
+                    GET dice from input
+                    roll chosen dice
+                    save kept dice and new dice in dice array
+                    DISPLAY dice
+
+            END WHILE
+            disable button rollAgain
+            COUNT diceSum
+            save diceSum in SESSION
+            DISPLAY diceSum in resultTable
+        ELSE
+            COUNT totalSum of diceSum in rows 1-6
+            IF totalSum >=63
+                bonus is 50
+                endSum is totalSum plus bonus
+            ELSE
+                bonus is 0
+                endSum is equal totalSum
+            DISPLAY all diceSum, totalSum, bonus and endSum in resultTable
+

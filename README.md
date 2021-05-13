@@ -1,3 +1,4 @@
 Spelet 21 nås via nabaren "Game21"
+Min github: https://github.com/redast/game
 
-Min github är privat, jag kan skicka zip om ni behöver
+<!-- phpcbf -->
