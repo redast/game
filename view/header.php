@@ -29,7 +29,7 @@ use function Mos\Functions\url;
         <a href="<?= url("/no/such/path") ?>">Show 404 example</a> |
         <a href="<?= url("/form/view") ?>">Game 21</a>
         |
-        <a href="<?= url("/yatzy/view") ?>">Yatzy</a>
+        <a href="<?= url("/yatzy-form/view") ?>">Yatzy</a>
     </nav>
 </header>
 <main>

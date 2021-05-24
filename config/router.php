@@ -41,7 +41,13 @@ $router->addRoute("POST", "/dice", ["\Mos\Controller\Game", "stopGame"]);
 
 $router->addRoute("GET", "/dice/reset", ["\Mos\Controller\Game", "resetGame"]);
 
-$router->addGroup("/yatzy", function (RouteCollector $router) {
+$router->addGroup("/yatzy-form", function (RouteCollector $router) {
     $router->addRoute("GET", "/view", ["\Mos\Controller\Yatzy", "view"]);
     $router->addRoute("POST", "/process", ["\Mos\Controller\Yatzy", "process"]);
+});
+
+$router->addGroup("/yatzy", function (RouteCollector $router) {
+    $router->addRoute("GET", "/play", ["\Mos\Controller\YatzyGame", "playGame"]);
+    $router->addRoute("POST", "/roll", ["\Mos\Controller\YatzyGame", "roll"]);
+   //$router->addRoute("GET", "/roll", ["\Mos\Controller\YatzyGame", "roll"]);
 });

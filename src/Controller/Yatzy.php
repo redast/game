@@ -22,11 +22,11 @@ class Yatzy
     {
         $data = [
             "header" => "Yatzy",
-            "message" => "Press submit to send the message to the result page.",
-            "action" => url("/yatzy/process"),
-            "output" => $_SESSION["output"] ?? null,
+            "message" => "Play yatzy game here!",
+            "action" => url("/yatzy-form/process"),
+            "start" => $_SESSION["start"] ?? null,
         ];
-        $body = renderView("layout/yatzy.php", $data);
+        $body = renderView("layout/yatzy-form.php", $data);
 
         $psr17Factory = new Psr17Factory();
         return $psr17Factory
@@ -36,11 +36,11 @@ class Yatzy
 
     public function process(): ResponseInterface
     {
-        $_SESSION["output"] = $_POST["content"] ?? null;
+        $_SESSION["start"] = $_POST["start"] ?? null;
 
         $psr17Factory = new Psr17Factory();
         return $psr17Factory
             ->createResponse(301)
-            ->withHeader("Location", url("/yatzy/view"));
+            ->withHeader("Location", url("/yatzy/play"));
     }
 }
